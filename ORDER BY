@@ -1,0 +1,30 @@
+SELECT *
+FROM person.person
+ORDER BY Firstname asc
+
+SELECT *
+FROM person.person
+ORDER BY Firstname desc
+
+SELECT *
+FROM person.person
+ORDER BY Firstname asc, LastName desc
+
+SELECT *
+FROM person.person
+ORDER BY MiddleName asc
+
+SELECT TOP 10 ProductID,ListPrice
+FROM Production.Product
+ORDER BY ListPrice desc
+
+SELECT name,ProductNumber,ProductID
+FROM Production.Product
+WHERE ProductID >= 1 AND ProductID <=4
+
+SELECT TOP 4 Name, ProductNumber, ProductID
+FROM Production.Product
+ORDER BY ProductID asc
+
+
+
