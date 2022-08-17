@@ -1,0 +1,17 @@
+SELECT *
+FROM Person.Person
+WHERE FirstName like 'ovi%' /*só o começo importa*/
+
+
+SELECT *
+FROM Person.Person
+WHERE FirstName like '%to' /*só o final importa*/
+
+SELECT *
+FROM Person.Person
+WHERE FirstName like '%essa%' /*só o que está no meio importa*/
+
+SELECT *
+FROM Person.Person
+WHERE FirstName like '%ro_' /*o underline limita a um caractere*/
+
