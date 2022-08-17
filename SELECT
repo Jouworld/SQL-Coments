@@ -1,0 +1,26 @@
+
+- - Trazer nome de produtos que pesão mais que 500kg e menos que 700kg
+
+SELECT name,Weight
+FROM Production.Product
+WHERE Weight > 500 AND Weight < 700
+
+
+- - Trazer informações da tabela de funcionários que estão casadas e assalariadas 
+
+SELECT *
+FROM HumanResources.Employee
+WHERE MaritalStatus = 'M' AND SalariedFlag = 1
+
+- - Trazer informções de um determida pessoa
+
+SELECT *
+FROM Person.PERSON
+WHERE FirstName = 'Peter' AND LastName = 'Krebs'
+
+
+- - Trazer e-mail conforme ID de entrada
+
+SELECT *
+FROM Person.EmailAddress
+WHERE BusinessEntityID = 26
