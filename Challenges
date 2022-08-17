@@ -1,0 +1,24 @@
+SELECT COUNT(ListPrice)  /*Quantos produtos custam mais que 1500*/
+FROM Production.Product
+WHERE ListPrice >=1500
+
+
+
+SELECT COUNT(Lastname)   /*Quantos pessoas tem o sobrenome que inicia com a letra P*/
+FROM person.person
+WHERE LastName like 'P%'
+
+
+SELECT COUNT(DISTINCT City) /*Quantas cidades unicas nossos clientes estão cadastrados*/
+FROM person.Address
+
+SELECT DISTINCT City  /*Quais cidades unicas nossos clientes estão cadastrados*/
+FROM person.Address
+
+SELECT COUNT(*) /*Quantos produtam custam entre 500 à 1000 e são vermelhos*/
+FROM Production.Product
+WHERE ListPrice between 500 AND 1000 AND Color = 'RED'
+
+SELECT COUNT(*)   /*Quantos nomes tem a palavra road*/
+FROM Production.Product
+WHERE name like '%road%'
