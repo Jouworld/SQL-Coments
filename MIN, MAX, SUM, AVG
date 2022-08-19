@@ -1,0 +1,11 @@
+SELECT TOP 10 sum (LineTotal) AS "Soma"   /*Traz soma da linha e nomeia a coluna como "soma"*/
+FROM Sales.SalesOrderDetail
+
+SELECT TOP 10 min (LineTotal)            /*Traz o menor valor da coluna*/
+FROM Sales.SalesOrderDetail
+
+SELECT TOP 10 max (LineTotal)         /*Traz o maior valor da coluna*/
+FROM Sales.SalesOrderDetail
+
+SELECT TOP 10 avg (LineTotal)      /*Traz o valor médio da coluna*/
+FROM Sales.SalesOrderDetail
