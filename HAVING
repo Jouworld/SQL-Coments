@@ -1,0 +1,29 @@
+SELECT FirstName, COUNT(FirstName) as "QUANTIDADE"
+FROM person.Person
+GROUP BY FirstName
+HAVING COUNT(FirstName) > 10
+
+
+SELECT ProductID, SUM(LineTotal) as "SOMA"
+FROM Sales.SalesOrderDetail
+GROUP BY ProductID
+HAVING SUM(LineTotal) BETWEEN 162000 AND 500000
+
+
+SELECT FirstName, COUNT(FirstName) as "QUANTIDADE"
+FROM person.Person
+WHERE Title like 'Mr.%'
+GROUP BY FirstName
+HAVING COUNT(FirstName) > 10
+
+
+
+SELECT StateProvinceID, COUNT(StateProvinceID)
+FROM person.Address
+GROUP BY StateProvinceID
+HAVING COUNT(StateProvinceID) > 1000
+
+SELECT ProductID, AVG(LineTotal)
+FROM Sales.SalesOrderDetail
+GROUP BY ProductID
+HAVING AVG(LineTotal) < 1000000
