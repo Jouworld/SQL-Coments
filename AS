@@ -1,0 +1,14 @@
+SELECT top 10 ListPrice as "Preço"
+FROM Production.Product
+
+SELECT top 10 AVG(ListPrice) as "Preço Médio"
+FROM Production.Product
+
+SELECT FirstName AS "Nome", LastName AS "Sobrenome"
+FROM Person.Person
+
+SELECT ProductID AS "Número do Produto"
+FROM Production.Product
+
+SELECT UnitPrice AS "Preço Unitátio"
+FROM Sales.SalesOrderDetail
