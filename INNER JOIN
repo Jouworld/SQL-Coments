@@ -1,0 +1,53 @@
+SELECT top 10 *
+FROM Person.Person
+
+SELECT top 10 *
+FROM Person.EmailAddress
+
+SELECT top 10 p.BusinessEntityID,p.FirstName,p.Lastname, pe.EmailAddress
+FROM Person.Person AS P
+INNER JOIN Person.EmailAddress pe ON p.BusinessEntityID = pe.BusinessEntityID
+
+SELECT top 10 *
+FROM Production.Product
+
+SELECT top 10 *
+FROM Production.ProductSubcategory
+
+SELECT TOP 10 p.ListPrice, p.Name, ps.Name
+FROM Production.Product AS p
+INNER JOIN Production.ProductSubcategory ps ON p.ProductSubcategoryID = ps.ProductSubcategoryID
+
+SELECT top 10 *
+FROM Person.BusinessEntityAddress
+
+SELECT top 10 *
+FROM Person.Address
+
+
+SELECT top 10 *     /*JUNTAR TODAS AS COLUNAS*/
+FROM Person.BusinessEntityAddress BA
+INNER JOIN Person.Address PA on ba.AddressID = PA.AddressID
+
+SELECT TOP 10*
+FROM person.PhoneNumberType
+
+SELECT TOP 10*
+FROM person.PersonPhone
+
+
+SELECT TOP 10 PP.BusinessEntityID, PP.PhoneNumberTypeID, PP.PhoneNumber, PT.Name
+FROM person.PersonPhone PP
+INNER JOIN person.PhoneNumberType PT ON PP.PhoneNumberTypeID = PT.PhoneNumberTypeID
+
+
+SELECT TOP 10*
+FROM person.StateProvince
+
+SELECT TOP 10*
+FROM Person.Address
+
+
+SELECT TOP 10 PA.AddressID, PA.City, SP.StateProvinceID, SP.Name
+FROM person.Address PA
+INNER JOIN person.StateProvince SP ON PA.StateProvinceID = SP.StateProvinceID
