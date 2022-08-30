@@ -1,0 +1,14 @@
+SELECT FirstName,Title,MiddleName
+FROM Person.Person
+WHERE Title = 'Mr.'
+UNION                                          /*O UNION REMOVE OS DADOS DUPLICADOS, O UNION ALL MANTEM OS DADOS DUPLICADOS*/
+SELECT FirstName,Title,MiddleName
+FROM Person.Person
+WHERE MiddleName = 'A'
+
+
+SELECT AddressID,AddressLine1
+FROM Person.Address
+UNION
+SELECT StateProvinceID, Name
+FROM person.StateProvince
