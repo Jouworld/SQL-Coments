@@ -1,0 +1,11 @@
+SELECT SalesOrderID, DATEPART(MONTH, OrderDate) AS MES
+FROM Sales.SalesOrderHeader
+
+SELECT AVG(TotalDue)AS MEDIA,DATEPART(MONTH, OrderDate) as MES
+FROM Sales.SalesOrderHeader
+GROUP BY DATEPART(MONTH, OrderDate)
+ORDER BY Mes
+
+SELECT AVG(TotalDue)AS MEDIA,DATEPART(YEAR, OrderDate) as ANO
+FROM Sales.SalesOrderHeader
+GROUP BY DATEPART(YEAR, OrderDate)
