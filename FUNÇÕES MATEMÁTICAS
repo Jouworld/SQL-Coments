@@ -1,0 +1,8 @@
+SELECT UnitPrice + LineTotal    --ASSIM COMO: subtração, divisão, multiplicação ou MIN,MAX.SUM
+FROM Sales.SalesOrderDetail
+
+SELECT ROUND(LineTotal,2),LineTotal  -- ARREDONDA O VALOR DA COLUNA COM A PRECISÃO INFORMADA
+FROM Sales.SalesOrderDetail
+
+SELECT SQRT(LineTotal) -- RETORNA A RAÍZ QUADRADA
+FROM Sales.SalesOrderDetail
