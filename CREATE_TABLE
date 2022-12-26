@@ -1,0 +1,27 @@
+CREATE TABLE Canal (
+
+CanalId INT Primary Key,
+Nome VARCHAR(150) NOT NULL,
+ContagemInscritos INT DEFAULT 0,
+DataCriacao DATETIME NOT NULL,
+
+);
+
+SELECT *
+FROM Canal
+
+
+CREATE TABLE Video(
+
+VideoId INT Primary Key,
+NomeVideo VARCHAR(150) NOT NULL,
+Visualizacoes INT DEFAULT 0,
+Likes INT DEFAULT 0,
+Deslikes INT DEFAULT 0,
+Duracao INT NOT NULL,
+CanalId INT Foreign Key REFERENCES Canal(CanalId)
+
+);
+
+SELECT *
+FROM Video
